@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
+</head>
+
+</body>
+<h1><img src="{{picture}}" alt="Profile Picture" width="5%" height="5%">Welcome {{name}}!</h1>
+<p><a href="/logout">Logout</a></p>
+<p><a href="/profile">Profile</a></p>
+
+<h1>
+    Enter text to detox:
+</h1>
+<form method="post">
+  <textarea name="text" width="80%">
+  </textarea>
+  <br/><br/>
+  <button type="submit">Submit</button>
+</form>
+
+{% for original, message in history %}
+  <p>
+    <li><b>Original:</b> {{ original }}
+    </li>
+    
+    <li><b>Detoxed:</b> {{ message }}</li>
+  </p>
+{% endfor %}
+
+</body>
+</html>

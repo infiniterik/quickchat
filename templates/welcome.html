@@ -1,0 +1,6 @@
+<h1>Welcome Guest</h1>
+{% for mesg in get_flashed_messages() %}
+    <pre>{{ mesg }}</pre>
+{% endfor %}
+
+<p><a href="/login">Login</a></p>
